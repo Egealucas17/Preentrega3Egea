@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+
 
 from . import views
 
@@ -11,7 +11,7 @@ urlpatterns = [
 
 
 urlpatterns += [
-    path("carga/", views.carga, name = "carga")
+    path("cargaAlumno/", views.cargaAlumno, name = "cargaAlumno")
 ]
 
 

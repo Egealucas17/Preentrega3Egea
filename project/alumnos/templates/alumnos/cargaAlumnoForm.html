@@ -8,7 +8,7 @@
 
 <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form_alumn.as_table }}
     <div class="row mt-4">
         <button type="submit" class="btn btn-success ">Guardar</button>
     </div>

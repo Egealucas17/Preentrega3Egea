@@ -1,21 +1,22 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import  render
 from . import forms, models
 
 
 def index(request):
-    alumno = models.alumno.objects.all()
-    #contexto = {"Alumnos":alumno}
     return render(request, "alumnos/index.html")
 
 
 
-def carga(request):
+def cargaAlumno(request):
     if request.method == "POST":
-        form = forms.alumnoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("alumnos:index")
+        form_alumno = forms.alumnoForm(request.POST)
+        print(form_alumno)
+        if form_alumno.is_valid():
+            info = form_alumno.cleaned_data
+            alumn = models.alumno(info("nombre"), info("escuela"))
+            alumn.save()
+            return render(request, "alumnos/index.html")
         else: 
-            form = forms.alumnoForm
-            return render(request, "alumnos/carga.html", {"form:form"})
+            form_alumno = forms.alumnoForm
+            return render(request, "alumnos/cargaAlumnoForm.html", {"form_alumno":form_alumno})
 
