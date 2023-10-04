@@ -13,5 +13,7 @@
 
         lo hice asi solo porque fui probando como funcionaba cada cosa
 
+    - arregle algunos errores pero todavia el template de formulario no me muestra el formulario. no se si mi error esta en views.url de la app alumnos o esta en el template de formularios cargaAlumnosForm.html
+
   
 
