@@ -1,4 +1,4 @@
-from django.shortcuts import  render
+from django.shortcuts import  render, redirect
 from . import forms, models
 
 
@@ -10,16 +10,12 @@ def index(request):
 def cargaAlumno(request):
 
         if request.method == "POST":
-            form_alumno = forms.alumnoForm(request.POST)
-
-            print(form_alumno)
-
-            if form_alumno.is_valid():
-                info = form_alumno.cleaned_data
-                alumn = models.alumno(info["nombre"], info["escuela"])
-                alumn.save()
-                return render(request, "alumnos/index.html")
+            form = forms.alumnoForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect("alumnos:index")
+            
         else: 
-            form_alumno = forms.alumnoForm
-            return render(request, "alumnos/cargaAlumnoForm.html", {"form_alumno":form_alumno})
+            form = forms.alumnoForm()
+        return render(request, "alumnos/cargaAlumnoForm.html", {"form": form})
 

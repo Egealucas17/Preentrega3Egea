@@ -1,5 +1,4 @@
 from django import forms
-
 from . import models
 
 
@@ -7,11 +6,6 @@ from . import models
 class alumnoForm(forms.ModelForm):
     class Meta:
         model = models.alumno
-        fields = "__all__"
+        fields = ["nombre" , "escuela"]
 
-        widgets = {
-            
-            "nombre": forms.TextInput(attrs={"class": "form-control"}),
-            "escuela": forms.TextInput(attrs= {"class": "form-control"})
-           
-        }
+   
