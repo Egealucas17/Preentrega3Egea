@@ -16,5 +16,5 @@ def cargaProfesor(request):
                 return redirect("profesor:index")
             
         else: 
-            form = forms.ProfesorForm()
+            form = forms.profesorForm()
         return render(request, "profesor/cargaProfesorForm.html", {"form": form})

@@ -3,7 +3,7 @@ from . import models
 
 
 
-class alumnoForm(forms.ModelForm):
+class profesorForm(forms.ModelForm):
     class Meta:
         model = models.profesor
         fields = ["nombre" , "nivel", "materia"]
