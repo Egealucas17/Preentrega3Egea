@@ -22,16 +22,7 @@
     </div>
 </div>
 
-<div class="row" >
-    <div class="col-md-6">
-        <div class="card">
-            <a href="{% url 'alumnos:cargaAlumno' %}" style="text-decoration: none">
-                <div class="card-body bg-light">
-                    <h5 class="card-title">
-                        Cargar Alumnos
-                    </h5>
-                </div>
-            </a>
-        </div>
-    </div>
+<p><a href=" {% url 'alumnos:cargaAlumno' %} " >    Cargar Alumno </a></p>
+<p><a href=" {% url 'home:index' %} " >    Home </a></p>
+
 {% endblock content %}
