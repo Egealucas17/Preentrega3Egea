@@ -3,7 +3,7 @@ from django.urls import path
 
 from . import views
 
-app_name = "profesor"
+app_name = "materia"
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -11,7 +11,7 @@ urlpatterns = [
 
 
 urlpatterns += [
-    path("cargaMateria/", views.cargamateria, name = "cargaMateria")
+    path("cargaMateria/", views.cargaMateria, name = "cargaMateria")
 ]
 
 
