@@ -6,6 +6,6 @@ from . import models
 class profesorForm(forms.ModelForm):
     class Meta:
         model = models.profesor
-        fields = ["nombre" , "nivel", "materia"]
+        fields = ["nombre" , "nivel", "materia_id"]
 
    
