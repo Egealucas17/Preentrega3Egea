@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-    Menu Alumnos -en construccion-
+    Menu de Profesores -en construccion-
 {% endblock title %}
 
 
@@ -15,13 +15,13 @@
     <div class="card">
             <div class="card-body bg-light">
                 <h5 class="card-title" style="text-decoration: none">
-                  Alumnos
+                  Profesor
                 </h5>
             </div>
     </div>
 </div>
 
-<p><a href=" {% url 'alumnos:cargaAlumno' %} " >    Cargar Alumnos </a></p>
+<p><a href=" {% url 'profesor:cargaProfesor' %} " >    Cargar Profesor </a></p>
 <p><a href=" {% url 'home:index' %} " >    Home </a></p>
 
 {% endblock content %}
