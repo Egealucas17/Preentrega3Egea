@@ -1,4 +1,5 @@
 from django.shortcuts import  render, redirect
+from django.http import HttpResponse
 from . import forms, models
 
 
@@ -18,3 +19,6 @@ def cargaProfesor(request):
         else: 
             form = forms.profesorForm()
         return render(request, "profesor/cargaProfesorForm.html", {"form": form})
+
+
+

@@ -11,7 +11,7 @@ urlpatterns = [
 
 
 urlpatterns += [
-    path("cargaProfesor/", views.cargaProfesor, name = "cargaProfesor")
+    path("cargaProfesor/", views.cargaProfesor, name = "cargaProfesor"),
 ]
 
 
